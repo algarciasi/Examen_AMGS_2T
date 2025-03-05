@@ -18,4 +18,11 @@ export class ProductlistComponent {
     this.arrProductos=[];
   }
 
+  ngOnInit():void {
+    this.productoService.getAllWithObservables().subscribe(
+      (data:any) =>{
+        this.arrProductos = data.results;
+      });
+  }
+
 }
