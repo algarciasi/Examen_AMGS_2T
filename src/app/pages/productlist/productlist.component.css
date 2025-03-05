@@ -1,0 +1,12 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}

@@ -1,0 +1,30 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    height: 100%; 
+    min-height: 250px; 
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

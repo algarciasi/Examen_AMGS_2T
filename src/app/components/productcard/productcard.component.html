@@ -1,1 +1,17 @@
-<p>productcard works!</p>
+<div class="card mb-3">
+    <div class="row g-0 align-items-center">
+        <div class="col-md-4">
+            <img [src]="miProducto.image" class="img-fluid rounded-start user-image" [alt]="miProducto.name">
+        </div>
+        <div class="col-md-8 d-flex flex-column justify-content-between p-3">
+            <div class="bg-light p-2 rounded">
+                <h6 class="card-title m-0 text-wrap">{{ miProducto.name }}</h6>
+            </div>
+            <div class="mt-2 d-flex justify-content-between align-items-center">
+                <span class="badge bg-dark p-2">{{ miProducto.price }} €</span>
+                <app-botonera [parent]="'card'" [_id]="miProducto._id"></app-botonera>
+            </div>
+        </div>
+    </div>
+</div>
+

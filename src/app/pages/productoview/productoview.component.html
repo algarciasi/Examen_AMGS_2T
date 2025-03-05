@@ -1,1 +1,16 @@
-<p>productoview works!</p>
+<section class="container mt-3">
+    <div class="card shadow p-3">
+        <div class="row">
+            <figure class="col-12 col-md-3">
+                <img class="img-fluid" [src]="miProducto.image" [alt]="miProducto.image">
+            </figure>
+            <div class="col-12 col-md-9">
+                <p><b>Nombre del producto:</b> {{miProducto.name}}</p>
+                <p><b>Precio del producto:</b> {{miProducto.price}}€</p>
+                <p><b>Descripcion del producto:</b> {{miProducto.description}}</p>
+                <p><b>Categoria:</b> {{miProducto.category}}</p>
+                <app-botonera [parent] ="'view'" [_id]="miProducto._id"></app-botonera>
+            </div>
+        </div>
+    </div>
+</section>

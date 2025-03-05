@@ -1,1 +1,22 @@
-<p>productlist works!</p>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        @for(producto of productosPaginados; track producto._id){
+            <article class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                <app-productcard [miProducto]="producto"></app-productcard>
+            </article>
+        }
+    </div>
+
+    <!-- Paginación -->
+    <div class="d-flex justify-content-between mt-3">
+        <button class="btn btn-primary" (click)="paginaAnterior()" [disabled]="pag === 1">
+            Anterior
+        </button>
+
+        <span>Página {{ pag }} de {{ totalPaginas }}</span>
+
+        <button class="btn btn-primary" (click)="paginaSiguiente()" [disabled]="pag >= totalPaginas">
+            Siguiente
+        </button>
+    </div>
+</div>
