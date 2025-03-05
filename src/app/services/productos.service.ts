@@ -21,4 +21,9 @@ export class ProductosService {
   getByIdWithObservable(_id: string): Observable<Producto>{
     return this.httpClient.get<Producto>(`${this.baseUrl}/${_id}`);
   }
+
+  borrar(_id: string): Observable<void> {
+    return this.httpClient.delete<void>(`${this.baseUrl}/${_id}`);
+  }
+
 }
